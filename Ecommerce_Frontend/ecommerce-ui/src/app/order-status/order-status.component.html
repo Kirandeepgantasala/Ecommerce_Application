@@ -1,0 +1,13 @@
+<div *ngIf="orderDetails?.orderStatus==='CONFIRMED'" class="container mt-2 d-flex flex-column p-3 justify-content-center align-items-center">
+<p class="fs-2" style="padding:10px; margin-bottom:20px;">Your Order is Successfully placed.</p>
+<p style="color:green;" class="fs-5 fs-semibold">Your OrderId:{{orderDetails.orderId}}</p>
+<p class="fs-6">Total Quantity:{{orderDetails.totalQuantity}}</p>
+<p class=fs-6>Total Price:{{orderDetails.totalPrice}}</p>
+</div>
+
+
+<div *ngIf="orderDetails?.orderStatus==='CREATED'">
+<p>Order is Confirmed</p>
+<p>{{orderDetails.orderId}}</p>
+
+</div>

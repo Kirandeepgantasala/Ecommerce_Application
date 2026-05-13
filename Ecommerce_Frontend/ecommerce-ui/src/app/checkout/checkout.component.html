@@ -1,0 +1,35 @@
+<div class="p-4 fs-4 fw-bold" style="color:blue;">Order Summary</div>
+<div class="container d-grid row-gap-3">
+
+    <div class="row">
+        <div *ngIf="cartItems.length>0">
+        <div class="col col-12 d-flex justify-content-around align-items-center p-2 gap-1" *ngFor="let cartItem of cartItems; let i=index" style="height:300px;border:2px solid green;">
+            <p>{{i+1}}</p>
+            <img src="{{cartItem.imageUrl}}" alt="{{cartItem.productName}}" style="width:200px;object-fit:contain;aspect-ratio:1/1;" class="img-fluid">
+
+            <div class="product-details p-2 text-center" style="margin-left:200px;">
+                <p style="padding:10px;">{{cartItem.productName}}</p>
+                <p style="padding:10px;">Price:{{cartItem.price}}</p>
+                <p>Quantity:{{cartItem.quantity}}</p>
+            </div>
+        </div>
+    
+
+    <div class="d-flex justify-content-around p-2" style="margin-top:50px;">
+        <div class="fs-5 fw-medium">
+            TotalPrice: {{totalPrice}}
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="placeOrder()">Place Order</button>
+        </div>
+        
+    </div>
+    </div>
+    </div>
+</div>
+
+<div *ngIf="cartItems.length<=0">
+<div>
+    cart is empty
+</div>
+</div>
