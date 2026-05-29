@@ -15,7 +15,7 @@ export class AuthService {
 
   constructor(private http:HttpClient) { }
 
-  private url = "http://localhost:8080";
+  private url = "https://ecommerce-application-vjk3.onrender.com";
   authResponse:AuthResponse={token:'',email:'',role:''}
 
   login(loginRequest:LoginRequest):Observable<AuthResponse>{

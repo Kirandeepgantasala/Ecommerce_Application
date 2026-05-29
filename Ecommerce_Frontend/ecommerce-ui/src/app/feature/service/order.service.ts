@@ -10,7 +10,7 @@ import { PaymentsResponse } from '../model/PaymentsResponse';
   providedIn: 'root'
 })
 export class OrderService {
-url = "http://localhost:8080/orders"
+url = "https://ecommerce-application-vjk3.onrender.com/orders"
   constructor(private http:HttpClient) { }
 
   placeOrder(orderRequest:PlaceOrderRequest):Observable<Order>{

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../feature/service/product.service';
 import { Product } from '../../feature/model/Product';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../../feature/service/cart.service';
 
 @Component({
   selector: 'app-featured',
@@ -14,7 +15,7 @@ import { CommonModule } from '@angular/common';
 export class FeaturedComponent implements OnInit {
  products:Product[]=[];
  featuredProducts:Product[]=[];
-  constructor(private productService:ProductService){}
+  constructor(private productService:ProductService,private cartService:CartService){}
   ngOnInit() {
     console.log("Featured ngOnInit");
     this.productService.getProductsByCategoryId(5).subscribe({
@@ -37,6 +38,10 @@ export class FeaturedComponent implements OnInit {
         console.log("Unable to fetch products",error)
       }
     })
+  }
+
+  addToCart(product:Product){
+this.cartService.addToCart(product);
   }
 
 

@@ -11,7 +11,7 @@ import { Order } from '../model/Order';
 })
 export class CustomerService {
 
-  url = "http://localhost:8080/customers"
+  url = "https://ecommerce-application-vjk3.onrender.com/customers"
   customerDetails!:CustomerDetails;
   constructor(private http:HttpClient) { }
    

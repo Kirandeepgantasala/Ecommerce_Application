@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CategoryService {
 
-  url = "http://localhost:8080/categories";
+  url = "https://ecommerce-application-vjk3.onrender.com/categories";
 
   constructor(private http:HttpClient) { }
 

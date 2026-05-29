@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-url = "http://localhost:8080/products/";
+url = "https://ecommerce-application-vjk3.onrender.com/products/";
   constructor(private http:HttpClient) { }
 
 
