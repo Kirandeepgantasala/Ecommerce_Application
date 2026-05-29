@@ -1,6 +1,0 @@
-<div class="d-flex oveflow-auto p-3 gap-0 justify-content-around">
-    <div class="p-3 bg-white text-center" *ngFor="let category of categories" style="min-width:120px; cursor:pointer;" (click)="getProductsByCategory(category.id)">
-        <img [src]=category.imageUrl alt="{{category.name}}" class="img-fluid mb-2" style="height:70px; object-fit:contain;">
-        <p class="fw-semibold">{{category.name}}</p>
-    </div>
-</div>

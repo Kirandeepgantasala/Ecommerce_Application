@@ -1,0 +1,59 @@
+<div *ngIf="addressList.length===0" class="address-card">
+<p class="address-name">No Saved Addresses
+</p>
+<p class="address-text">Please add an address to continue</p>
+</div>
+<div *ngIf="addressList.length > 0">
+
+    <div
+        class="address-card"
+        *ngFor="let address of addressList">
+
+        <div class="d-flex align-items-start">
+
+            <!-- RADIO -->
+
+            <input
+                type="radio"
+                name="selectedAddress"
+                class="form-check-input custom-radio"
+
+                [value]="address.id"
+
+                [(ngModel)]="selectedAddressId"
+
+                (change)="selectAddress(address.id)">
+
+            <!-- DETAILS -->
+
+            <div class="ms-3 flex-grow-1">
+
+                <h5 class="address-name">
+
+                    {{address.customerName}}
+
+                </h5>
+
+                <p class="address-phone">
+
+                    {{address.phoneNumber}}
+
+                </p>
+
+                <p class="address-text">
+
+                    {{address.houseNumber}},
+                    {{address.street}},
+                    {{address.city}},
+                    {{address.state}},
+                    {{address.country}}
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

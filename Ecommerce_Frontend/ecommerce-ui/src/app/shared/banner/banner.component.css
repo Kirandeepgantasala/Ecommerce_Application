@@ -1,0 +1,91 @@
+/* OUTER GAP */
+
+.banner-wrapper{
+    background:#121212;
+
+    padding:25px 30px;
+}
+
+/* BANNER */
+
+.banner{
+    height:350px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+/* CONTENT */
+
+.banner-overlay{
+    width:100%;
+    padding-left:60px;
+}
+
+.banner-content{
+    max-width:500px;
+}
+
+/* TAG */
+
+.sale-tag{
+    color:#ffc107;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+}
+
+/* TITLE */
+
+.banner-title{
+    color:white;
+
+    font-size:46px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:15px;
+}
+
+/* SUBTITLE */
+
+.banner-subtitle{
+    color:#d0d0d0;
+
+    font-size:20px;
+
+    margin-bottom:25px;
+}
+
+/* BUTTON */
+
+.banner-btn{
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+}

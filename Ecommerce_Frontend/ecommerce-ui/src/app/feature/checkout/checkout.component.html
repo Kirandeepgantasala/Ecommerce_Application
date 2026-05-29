@@ -1,0 +1,238 @@
+<div class="checkout-container">
+
+    <!-- PAGE TITLE -->
+    <div class="mb-4">
+
+        <h2 class="checkout-title">
+
+            Checkout
+
+        </h2>
+
+        <p class="text-muted mb-0">
+
+            Review your cart and delivery details
+
+        </p>
+
+    </div>
+
+    <!-- ADDRESS SECTION -->
+
+<div class="checkout-card mb-4">
+
+    <!-- HEADER -->
+    <div class="section-header">
+
+        <h4>
+
+            <i class="bi bi-geo-alt-fill"></i>
+
+            Delivery Address
+
+        </h4>
+
+        <!-- TOGGLE BUTTON -->
+
+        <button
+            class="toggle-address-btn"
+            (click)="toggleAddressForm()">
+
+            <i
+                class="bi"
+                [ngClass]="showAddressForm
+                ? 'bi-dash-lg'
+                : 'bi-plus-lg'">
+
+            </i>
+
+        </button>
+
+    </div>
+
+    <div class="p-4">
+
+        <!-- ADDRESS LIST -->
+
+        <app-address-list
+            (selectedAddress)="onAddressSelected($event)">
+        </app-address-list>
+
+        <!-- SELECTED -->
+
+        <div
+            *ngIf="selectedAddressId"
+            class="selected-address">
+
+            <i class="bi bi-check-circle-fill me-2"></i>
+
+            Address Selected Successfully
+
+        </div>
+
+        <!-- ADD ADDRESS FORM -->
+
+        <div
+            *ngIf="showAddressForm"
+            class="mt-4">
+
+            <app-add-address>
+            </app-add-address>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div
+*ngIf="!selectedAddressId"
+class="address-warning">
+
+    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+
+    Please select or add a delivery address
+
+</div>
+    <!-- ORDER SUMMARY -->
+
+<div class="checkout-card">
+
+    <!-- HEADER -->
+
+    <div class="section-header">
+
+        <h4>
+
+            <i class="bi bi-bag-check-fill"></i>
+
+            Order Summary
+
+        </h4>
+
+    </div>
+
+    <div class="p-4">
+
+        <!-- CART ITEMS -->
+
+        <div *ngIf="cartItems.length > 0">
+
+            <div
+                class="cart-item"
+                *ngFor="let cartItem of cartItems; let i=index">
+
+                <!-- LEFT -->
+
+                <div class="d-flex align-items-center gap-4">
+
+                    <!-- IMAGE -->
+
+                    <div class="cart-image-box">
+
+                        <img
+                            [src]="cartItem.imageUrl"
+                            [alt]="cartItem.productName"
+                            class="cart-image">
+
+                    </div>
+
+                    <!-- DETAILS -->
+
+                    <div>
+
+                        <p class="item-number">
+
+                            Item #{{i+1}}
+
+                        </p>
+
+                        <h5 class="item-name">
+
+                            {{cartItem.productName}}
+
+                        </h5>
+
+                        <p class="item-qty">
+
+                            Quantity:
+                            {{cartItem.quantity}}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="item-price">
+
+                    ₹{{cartItem.price}}
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+
+            <div class="checkout-total-section">
+
+                <div>
+
+                    <p class="total-label">
+
+                        Total Amount
+
+                    </p>
+
+                    <h2 class="grand-total">
+
+                        ₹{{placeOrderRequest.totalPrice}}
+
+                    </h2>
+
+                </div>
+
+               <button
+class="place-order-btn"
+
+[disabled]="!selectedAddressId || isPlacingOrder"
+
+(click)="placeOrder()">
+
+    <i class="bi bi-lightning-charge-fill me-2"></i>
+
+    <span *ngIf="isPlacingOrder" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                {{isPlacingOrder ? 'Placing Order...' : 'Place Order'}}
+
+</button>
+
+            </div>
+
+        </div>
+
+        <!-- EMPTY -->
+
+        <div
+            *ngIf="cartItems.length <= 0"
+            class="empty-cart">
+
+            <i class="bi bi-cart-x"></i>
+
+            <h4>
+
+                Your Cart is Empty
+
+            </h4>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+          
+
+</div>

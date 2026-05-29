@@ -1,0 +1,71 @@
+.address-card{
+
+    background: #222222;
+
+    border: 1px solid #333;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+
+}
+
+.address-card:hover{
+
+    border-color: #ffc107;
+
+    transform: translateY(-2px);
+
+}
+
+/* RADIO */
+
+.custom-radio{
+
+    width: 22px;
+
+    height: 22px;
+
+    cursor: pointer;
+
+    accent-color: #ffc107;
+
+}
+
+/* NAME */
+
+.address-name{
+
+    color: #ffc107;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+}
+
+/* PHONE */
+
+.address-phone{
+
+    color: #ddd;
+
+    margin-bottom: 8px;
+
+}
+
+/* ADDRESS */
+
+.address-text{
+
+    color: #999;
+
+    line-height: 1.6;
+
+    margin-bottom: 0;
+
+}

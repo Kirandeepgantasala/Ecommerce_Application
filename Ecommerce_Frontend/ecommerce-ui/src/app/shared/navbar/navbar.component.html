@@ -1,0 +1,118 @@
+<nav class="navbar navbar-expand-lg custom-navbar px-4">
+
+    <div class="container-fluid">
+
+        <!-- LEFT -->
+        <div class="d-flex align-items-center gap-4">
+
+            <i class="bi bi-list menu-btn"
+               (click)="toggleSidebar()"></i>
+
+            <a class="navbar-brand brand-logo"
+               routerLink="/">
+
+                NexCart
+
+                <i class="bi bi-cart-fill"></i>
+
+            </a>
+
+        </div>
+
+        <!-- SEARCH -->
+        <form class="d-flex search-form"
+              role="search"
+              (ngSubmit)="search($event)">
+
+            <input class="form-control search-input"
+                   type="search"
+                   placeholder="Search products"
+                   [(ngModel)]="keyword"
+                   name="keyword">
+
+            <button class="btn btn-warning search-btn"
+                    type="submit">
+
+                <i class="bi bi-search"></i>
+
+            </button>
+
+        </form>
+
+        <!-- RIGHT -->
+        <div class="d-flex align-items-center gap-4">
+
+            <a class="nav-link nav-text"
+               routerLink="/orders">
+
+                Orders
+
+            </a>
+
+            <a class="nav-link nav-text d-flex align-items-center gap-2"
+               routerLink="/cart">
+
+                <i class="bi bi-cart3"></i>
+
+                Cart
+
+            </a>
+
+            <a class="nav-link nav-text" *ngIf="userLoggedIn"
+              [routerLink]="userLoggedIn ? '/profile':'/login'" >
+
+              <i *ngIf="isUserLoggedIn" class="bi bi-person-circle"></i>
+                {{userLoggedIn ? 'Account' : 'Login'}}
+
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar"
+     [class.active]="isActive">
+
+    <div class="sidebar-top">
+
+        <h4>NexCart</h4>
+
+        <i class="bi bi-x-lg close-btn"
+           (click)="toggleSidebar()"></i>
+
+    </div>
+
+    <div class="sidebar-links">
+
+        <a routerLink="/">
+            <i class="bi bi-house-door"></i>
+            Home
+        </a>
+
+        <a routerLink="/profile">
+            <i class="bi bi-person"></i>
+            Account
+        </a>
+
+        <a routerLink="/orders">
+            <i class="bi bi-box-seam"></i>
+            Orders
+        </a>
+
+        <a href="#">
+            <i class="bi bi-gear"></i>
+            Settings
+        </a>
+
+        <a (click)="logout()">
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+        </a>
+
+    </div>
+
+</div>

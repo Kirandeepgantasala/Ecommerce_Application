@@ -1,0 +1,128 @@
+/* SECTION */
+
+.featured-section{
+    background:#121212;
+    padding:30px 0 50px 0;
+}
+
+/* HEADER */
+
+.featured-header{
+    padding:0 40px;
+    margin-bottom:10px;
+}
+
+.featured-title{
+    color:white;
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.featured-subtitle{
+    color:#bdbdbd;
+    font-size:17px;
+    margin:0;
+}
+
+/* CARD */
+
+.featured-card{
+    background:#1e1e1e;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    border:1px solid #2d2d2d;
+
+    transition:0.3s;
+
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.featured-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#ffc107;
+
+    box-shadow:0 0 18px rgba(255,193,7,0.12);
+}
+
+/* IMAGE */
+
+.featured-image-container{
+    height:240px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.featured-image{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+}
+
+/* DETAILS */
+
+.featured-details{
+    flex-grow:1;
+}
+
+/* NAME */
+
+.featured-name{
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+    margin-bottom:12px;
+}
+
+/* RATING */
+
+.featured-rating{
+    color:#ffc107;
+
+    font-size:18px;
+
+    margin-bottom:15px;
+}
+
+/* PRICE */
+
+.featured-price{
+    color:white;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+
+.featured-btn{
+    width:100%;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    font-size:16px;
+}

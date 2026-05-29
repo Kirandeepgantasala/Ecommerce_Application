@@ -1,0 +1,213 @@
+<div class="custom-address-container">
+
+    <!-- HEADER -->
+
+    <div class="custom-address-header">
+
+        <h4>
+
+            <i class="bi bi-plus-circle-fill me-2"></i>
+
+            Add New Address
+
+        </h4>
+
+        <p>
+
+            Fill your delivery details below
+
+        </p>
+
+    </div>
+
+    <!-- FORM -->
+
+    <div class="form-wrapper">
+
+        <form
+            [formGroup]="addressForm"
+            (ngSubmit)="onSubmit()">
+
+            <div class="row">
+
+                <!-- FULL NAME -->
+
+                <div class="col-md-6 mb-4">
+
+                    <label>
+
+                        Full Name
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="customerName"
+                        placeholder="Enter Full Name">
+
+                </div>
+
+                <!-- PHONE -->
+
+                <div class="col-md-6 mb-4">
+
+                    <label>
+
+                        Phone Number
+
+                    </label>
+
+                    <input
+                        type="number"
+                        class="form-control"
+                        formControlName="phoneNumber"
+                        placeholder="Enter Phone Number">
+
+                </div>
+
+                <!-- HOUSE -->
+
+                <div class="col-md-6 mb-4">
+
+                    <label>
+
+                        House Number
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="houseNumber"
+                        placeholder="Flat / House Number">
+
+                </div>
+
+                <!-- STREET -->
+
+                <div class="col-md-6 mb-4">
+
+                    <label>
+
+                        Street
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="street"
+                        placeholder="Enter Street">
+
+                </div>
+
+                <!-- CITY -->
+
+                <div class="col-md-6 mb-4">
+
+                    <label>
+
+                        City
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="city"
+                        placeholder="Enter City">
+
+                </div>
+
+                <!-- STATE -->
+
+                <div class="col-md-6 mb-4">
+
+                    <label>
+
+                        State
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="state"
+                        placeholder="Enter State">
+
+                </div>
+
+                <!-- COUNTRY -->
+
+                <div class="col-md-6 mb-4">
+
+                    <label>
+
+                        Country
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="country"
+                        placeholder="Enter Country">
+
+                </div>
+
+                <!-- PINCODE -->
+
+                <div class="col-md-6 mb-4">
+
+                    <label>
+
+                        Pincode
+
+                    </label>
+
+                    <input
+                        type="number"
+                        class="form-control"
+                        formControlName="pincode"
+                        placeholder="Enter Pincode">
+
+                </div>
+
+                <!-- LANDMARK -->
+
+                <div class="col-12 mb-4">
+
+                    <label>
+
+                        Landmark
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="landmark"
+                        placeholder="Nearby Landmark">
+
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="save-address-btn w-100" [disabled]="isSpinnerEnabled">
+
+                <i class="bi bi-check-circle-fill me-2"></i>
+
+                Save Address
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

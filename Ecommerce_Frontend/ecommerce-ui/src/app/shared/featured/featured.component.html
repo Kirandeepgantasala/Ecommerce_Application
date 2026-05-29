@@ -1,0 +1,74 @@
+<div class="featured-section">
+
+    <!-- TITLE -->
+
+    <div class="featured-header">
+
+        <h2 class="featured-title">
+            Featured Products
+        </h2>
+
+        <p class="featured-subtitle">
+            Trending products picked for you
+        </p>
+
+    </div>
+
+    <!-- PRODUCTS -->
+
+    <div class="container py-4">
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-4"
+                 *ngFor="let product of featuredProducts">
+
+                <div class="featured-card h-100">
+
+                    <!-- IMAGE -->
+
+                    <div class="featured-image-container">
+
+                        <img [src]="product.imageUrl"
+                             class="featured-image"
+                             alt="{{product.name}}">
+
+                    </div>
+
+                    <!-- DETAILS -->
+
+                    <div class="featured-details">
+
+                        <h5 class="featured-name">
+                            {{product.name}}
+                        </h5>
+
+                        <div class="featured-rating">
+                            ★★★★☆
+                        </div>
+
+                        <p class="featured-price">
+                            ₹{{product.price}}
+                        </p>
+
+                    </div>
+
+                    <!-- BUTTON -->
+
+                    <button class="btn btn-warning featured-btn">
+
+                        <i class="bi bi-cart-plus-fill"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

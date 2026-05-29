@@ -1,0 +1,118 @@
+<app-auth-navbar></app-auth-navbar>
+<div class="register-page">
+
+    <div class="register-card">
+
+        <!-- HEADER -->
+
+        <div class="register-header">
+
+            <h1 class="register-title">
+
+                NexCart
+
+                <i class="bi bi-cart-fill"></i>
+
+            </h1>
+
+            <p class="register-subtitle">
+
+                Create your account and start shopping
+
+            </p>
+
+        </div>
+
+        <!-- FORM -->
+
+        <form [formGroup]="registerForm"
+              (ngSubmit)="onSubmit()"
+              class="register-form">
+
+            <!-- NAME -->
+
+            <div class="input-group-custom">
+
+                <label for="name">
+
+                    Full Name
+
+                </label>
+
+                <input type="text"
+                       id="name"
+                       formControlName="name"
+                       placeholder="Enter your full name">
+
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="input-group-custom">
+
+                <label for="email">
+
+                    Email
+
+                </label>
+
+                <input type="email"
+                       id="email"
+                       formControlName="email"
+                       placeholder="Enter your email">
+
+            </div>
+
+            <!-- PHONE -->
+
+            <div class="input-group-custom">
+
+                <label for="phno">
+
+                    Phone Number
+
+                </label>
+
+                <input type="number"
+                       id="phno"
+                       formControlName="phoneNumber"
+                       placeholder="Enter phone number">
+
+            </div>
+
+            <!-- PASSWORD -->
+
+            <div class="input-group-custom">
+
+                <label for="password">
+
+                    Password
+
+                </label>
+
+                <input type="password"
+                       id="password"
+                       formControlName="password"
+                       placeholder="Create a password">
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="register-btn"
+                    [disabled]="registerForm.invalid">
+
+                
+
+
+                <span *ngIf="isRegistering" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                {{isRegistering ? 'Registering...' : 'Create Account'}}
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+.payment-card{
+    background-color:#1e1e1e;
+    width:450px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(255,255,255,0.08);
+    border:1px solid #333;
+}
+
+.failure-icon{
+    font-size:90px;
+    color:#dc3545;
+}
+
+.failure-title{
+    color:white;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.failure-text{
+    color:#cfcfcf;
+    font-size:18px;
+    line-height:1.6;
+}
+
+button{
+    border-radius:10px;
+}

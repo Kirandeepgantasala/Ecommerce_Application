@@ -1,0 +1,84 @@
+<app-auth-navbar></app-auth-navbar>
+<div class="login-page">
+
+
+    <div class="login-card">
+
+
+
+        <div class="login-header">
+
+            <h1 class="login-title">
+
+                Welcome back!
+
+                
+
+            </h1>
+
+            <p class="login-subtitle">
+
+                Login to continue shopping
+
+            </p>
+
+        </div>
+
+        <!-- FORM -->
+
+        <form [formGroup]="loginForm"
+              (ngSubmit)="onSubmit()"
+              class="login-form">
+
+            <!-- EMAIL -->
+
+            <div class="input-group-custom">
+
+                <label for="email">
+
+                    Email
+
+                </label>
+
+                <input type="email"
+                       id="email"
+                       formControlName="email"
+                       placeholder="Enter your email">
+
+            </div>
+
+            <!-- PASSWORD -->
+
+            <div class="input-group-custom">
+
+                <label for="password">
+
+                    Password
+
+                </label>
+
+                <input type="password"
+                       id="password"
+                       formControlName="password"
+                       placeholder="Enter your password">
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="login-btn"
+                    [disabled]="loginForm.invalid || isSpinnerEnabled">
+<span *ngIf="isSpinnerEnabled" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                {{isSpinnerEnabled ? 'Logging in...' : 'Login'}}
+
+            </button>
+
+          
+
+        </form>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,75 @@
+<app-category-list></app-category-list>
+<div class="products-page">
+
+    <!-- CATEGORY HEADER -->
+    <div class="category-header">
+
+        <h1 class="category-title">
+            {{categoryName}}
+        </h1>
+
+        <p class="category-subtitle">
+            Explore products from {{categoryName}}
+        </p>
+
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="container py-4">
+
+        <div class="row g-4">
+
+            <div class="col-12"
+                 *ngFor="let product of products"
+                 (click)="getProductDetails(product.id)">
+
+                <div class="product-card">
+
+                    <!-- IMAGE -->
+                    <div class="image-container">
+
+                        <img [src]="product.imageUrl"
+                             alt="{{product.name}}"
+                             class="product-image">
+
+                    </div>
+
+                    <!-- CONTENT -->
+                    <div class="product-content">
+
+                        <div class="product-details">
+
+                            <h2 class="product-name">
+                                {{product.name}}
+                            </h2>
+
+                            <p class="product-price">
+                                ₹{{product.price}}
+                            </p>
+
+                        </div>
+
+                        <button class="btn btn-warning add-btn"
+                                (click)="addToCart(product,$event)" [disabled]="isSpinnerEnabled">
+
+                            <i class="bi bi-cart-plus-fill"></i>
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div *ngIf="isSpinnerEnabled" class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+
+</div>

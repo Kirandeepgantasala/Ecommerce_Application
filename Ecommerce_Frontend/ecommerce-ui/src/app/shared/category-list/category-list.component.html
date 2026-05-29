@@ -1,0 +1,25 @@
+<div class="categories-wrapper">
+
+    <div class="categories-container">
+
+        <div class="category-card"
+             *ngFor="let category of categories"
+             (click)="getProductsByCategory(category.id,category.name)">
+
+            <div class="category-image-container">
+
+                <img [src]="category.imageUrl"
+                     alt="{{category.name}}"
+                     class="category-image">
+
+            </div>
+
+            <p class="category-name">
+                {{category.name}}
+            </p>
+
+        </div>
+
+    </div>
+
+</div>

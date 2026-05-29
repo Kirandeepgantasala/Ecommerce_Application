@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+/* GLOBAL RESET */
+
+html,
+body{
+
+    background: #111111 !important;
+
+    color: white;
+
+    margin: 0;
+
+    padding: 0;
+
+    min-height: 100%;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* REMOVE WHITE */
+
+*{
+
+    box-sizing: border-box;
+
+}
+
+/* ROOT APP */
+
+app-root{
+
+    display: block;
+
+    min-height: 100vh;
+
+    background: #111111;
+
+}

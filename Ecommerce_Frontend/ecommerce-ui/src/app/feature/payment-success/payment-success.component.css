@@ -1,0 +1,27 @@
+.payment-card{
+    background-color:#1e1e1e;
+    width:450px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(255,255,255,0.08);
+    border:1px solid #333;
+}
+
+.success-icon{
+    font-size:90px;
+    color:#ffc107;
+}
+
+.success-title{
+    color:white;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.success-text{
+    color:#cfcfcf;
+    font-size:18px;
+}
+
+button{
+    border-radius:10px;
+}

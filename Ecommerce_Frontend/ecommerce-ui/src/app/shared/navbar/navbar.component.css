@@ -1,0 +1,151 @@
+/* NAVBAR */
+
+.custom-navbar{
+    background-color:#121212;
+    height:75px;
+    border-bottom:1px solid #2d2d2d;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* BRAND */
+
+.brand-logo{
+    color:#ffc107 !important;
+    font-size:28px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.brand-logo i{
+    font-size:24px;
+}
+
+/* MENU ICON */
+
+.menu-btn{
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu-btn:hover{
+    color:#ffc107;
+}
+
+/* SEARCH */
+
+.search-form{
+    width:45%;
+    display:flex;
+    gap:10px;
+}
+
+.search-input{
+    background:#1f1f1f;
+    border:1px solid #333;
+    color:white;
+    border-radius:12px;
+    padding:10px 15px;
+}
+
+.search-input:focus{
+    background:#1f1f1f;
+    color:white;
+    border-color:#ffc107;
+    box-shadow:none;
+}
+
+.search-input::placeholder{
+    color:#aaa;
+}
+
+.search-btn{
+    border-radius:12px;
+    padding:0 18px;
+    font-weight:600;
+}
+
+/* NAV LINKS */
+
+.nav-text{
+    color:white !important;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-text:hover{
+    color:#ffc107 !important;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-280px;
+    width:280px;
+    height:100vh;
+
+    background:#1a1a1a;
+
+    padding:25px;
+
+    transition:0.3s;
+
+    z-index:2000;
+
+    border-right:1px solid #2d2d2d;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+/* SIDEBAR TOP */
+
+.sidebar-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:40px;
+}
+
+.sidebar-top h4{
+    color:#ffc107;
+    font-weight:bold;
+}
+
+.close-btn{
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* LINKS */
+
+.sidebar-links{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.sidebar-links a{
+    color:white;
+    text-decoration:none;
+
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    transition:0.3s;
+}
+
+.sidebar-links a:hover{
+    color:#ffc107;
+    transform:translateX(5px);
+}

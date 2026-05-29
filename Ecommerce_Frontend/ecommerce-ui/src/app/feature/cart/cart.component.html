@@ -1,0 +1,138 @@
+<div class="cart-page">
+
+    <!-- TITLE -->
+
+    <div class="cart-header">
+
+        <h1 class="cart-title">
+
+            <i class="bi bi-cart3"></i>
+
+            Shopping Cart
+
+        </h1>
+
+    </div>
+
+    <!-- EMPTY CART -->
+
+    <div *ngIf="cartItems.length<=0"
+         class="empty-cart">
+
+        <i class="bi bi-cart-x empty-icon"></i>
+
+        <h2>Your Cart is Empty</h2>
+
+        <p>Add products to continue shopping</p>
+
+    </div>
+
+    <!-- CART ITEMS -->
+
+    <div class="container py-4"
+         *ngIf="cartItems.length>0">
+
+        <div class="row g-4">
+
+            <div class="col-12"
+                 *ngFor="let cartItem of cartItems">
+
+                <div class="cart-card">
+
+                    <!-- IMAGE -->
+
+                    <div class="cart-image-container">
+
+                        <img [src]="cartItem.imageUrl"
+                             alt="{{cartItem.productName}}"
+                             class="cart-image">
+
+                    </div>
+
+                    <!-- DETAILS -->
+
+                    <div class="cart-details">
+
+                        <h3 class="cart-product-name">
+
+                            {{cartItem.productName}}
+
+                        </h3>
+
+                        <p class="cart-price">
+
+                            ₹{{cartItem.price}}
+
+                        </p>
+
+                    </div>
+
+                    <!-- QUANTITY -->
+
+                    <div class="quantity-section">
+
+                        <button class="qty-btn decrease-btn"
+                                (click)="decreaseQuantity(cartItem.productId)">
+
+                            -
+
+                        </button>
+
+                        <span class="quantity-number">
+
+                            {{cartItem.quantity}}
+
+                        </span>
+
+                        <button class="qty-btn increase-btn"
+                                (click)="increaseQuantity(cartItem.productId)">
+
+                            +
+
+                        </button>
+
+                    </div>
+
+                    <!-- REMOVE -->
+
+                    <button class="btn remove-btn"
+                            (click)="removeItemFromCart(cartItem.productId)">
+
+                        <i class="bi bi-trash3-fill"></i>
+
+                        Remove
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SUMMARY -->
+
+        <div class="cart-summary">
+
+            <div>
+
+                <h3 class="summary-price">
+
+                    Total Amount: ₹{{totalPrice}}
+
+                </h3>
+
+            </div>
+
+            <button class="btn btn-warning payment-btn"
+                    (click)="proceedToPayment()">
+
+                Proceed to Payment
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
