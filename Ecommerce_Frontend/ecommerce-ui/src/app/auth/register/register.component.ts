@@ -5,11 +5,12 @@ import { AuthService } from '../auth.service';
 import { AuthNavbarComponent } from '../auth-navbar/auth-navbar.component';
 import { ToastrService } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule,AuthNavbarComponent,CommonModule],
+  imports: [ReactiveFormsModule,AuthNavbarComponent,CommonModule,RouterLink],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
