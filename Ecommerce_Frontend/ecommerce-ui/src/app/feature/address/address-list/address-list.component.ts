@@ -40,5 +40,7 @@ export class AddressListComponent implements OnInit {
 this.selectedAddress.emit(id);
   }
 
+ 
+
 
 }

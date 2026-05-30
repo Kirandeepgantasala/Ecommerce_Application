@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CartService } from '../service/cart.service';
 import { CartItem } from '../model/CartItem';
 import { CommonModule } from '@angular/common';
@@ -22,6 +22,8 @@ declare var Razorpay: any;
   styleUrl: './checkout.component.css',
 })
 export class CheckoutComponent implements OnInit {
+  @ViewChild(AddressListComponent)
+  addressList!:AddressListComponent;
   cartItems: CartItem[] = [];
   totalPrice: number = 0;
   orderItems: OrderItem[] = [];
@@ -202,5 +204,9 @@ toggleAddressForm(){
 
   console.log(this.showAddressForm);
 
+}
+
+refreshAddressList(){
+this.addressList.getCustomerAddressesList();
 }
 }

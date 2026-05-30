@@ -76,7 +76,7 @@
             *ngIf="showAddressForm"
             class="mt-4">
 
-            <app-add-address>
+            <app-add-address (addressAdded)="refreshAddressList()">
             </app-add-address>
 
         </div>

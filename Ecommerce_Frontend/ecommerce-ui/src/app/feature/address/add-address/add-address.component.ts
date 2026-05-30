@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Address } from '../../model/Address';
 import { Form, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CustomerService } from '../../service/customer.service';
@@ -31,6 +31,7 @@ export class AddAddressComponent implements OnInit {
   };
   message:string='';
   errorMessage:string='';
+  @Output() addressAdded = new EventEmitter<void>();
   constructor(private fb:FormBuilder,private customerService:CustomerService,
     private toast:ToastrService
   ){}
@@ -57,6 +58,7 @@ onSubmit(){
         this.message = data.message;
         console.log(this.message);
         this.toast.success("Address Added Successfully");
+        this.addressAdded.emit();
         
       },
       error:(error)=>{
