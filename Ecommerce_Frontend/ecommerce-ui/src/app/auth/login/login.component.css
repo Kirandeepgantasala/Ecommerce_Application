@@ -156,9 +156,9 @@
 
     cursor:not-allowed;
 }
-register_subtitle{
+.register_subtitle{
     color:#bdbdbd;
 }
-register_link{
+.register_link{
     color:#ffc107;
 }
