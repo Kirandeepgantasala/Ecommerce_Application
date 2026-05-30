@@ -165,3 +165,10 @@ input::-webkit-inner-spin-button{
 
     cursor:not-allowed;
 }
+
+login_subtitle{
+    color:#bdbdbd;
+}
+login_link{
+    color:#ffc107;
+}

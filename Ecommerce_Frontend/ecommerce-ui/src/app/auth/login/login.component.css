@@ -156,3 +156,9 @@
 
     cursor:not-allowed;
 }
+register_subtitle{
+    color:#bdbdbd;
+}
+register_link{
+    color:#ffc107;
+}
