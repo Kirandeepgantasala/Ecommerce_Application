@@ -176,7 +176,7 @@ Razorpay Payment Gateway
 ### Backend Setup
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Kirandeepgantasala/Ecommerce_Application
 
 cd Ecommerce_Backend
 
