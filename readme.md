@@ -1,7 +1,7 @@
 # 🛒 Ecommerce Application
 
 ![Angular](https://img.shields.io/badge/Angular-18-red)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5-green)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3-green)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
 ![JWT](https://img.shields.io/badge/JWT-Authentication-orange)
 ![Razorpay](https://img.shields.io/badge/Razorpay-Payment-purple)
