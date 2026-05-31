@@ -96,6 +96,8 @@ https://ecommerce-application-vjk3.onrender.com
 ### Products Page
 
 ![Products](screenshots/product-page.png)
+![Products](screenshots/product-page-continuation.png)
+
 
 ### Shopping Cart
 
